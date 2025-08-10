@@ -61,9 +61,8 @@ RUN mkdir -p /home/vscode/.claude && \
 
 ENV CLAUDE_CONFIG_DIR=/home/vscode/.claude
 
-RUN export PATH="~/.local/bin:$PATH"
-
 # Install Claude Code (non-root installation for auto-updates)
+RUN export PATH="~/.local/bin:$PATH"
 RUN curl -fsSL https://claude.ai/install.sh | zsh -s latest
 
 # Set up command history persistence for Claude Code
