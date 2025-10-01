@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.0...v1.2.1) (2025-10-01)
+
+
+### Bug Fixes
+
+* node nvm installation not being available to local user and zsh install ([3cabece](https://github.com/stkr22/devcontainer-python-container/commit/3cabece1f615f3f3a17232b8314cd22e655c5b72))
+
 ## [1.2.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.1.0...v1.2.0) (2025-10-01)
 
 
