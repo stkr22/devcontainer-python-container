@@ -26,15 +26,15 @@ RUN apt-get update && apt-get install -y \
     fonts-powerline \
     && rm -rf /var/lib/apt/lists/*
 
+# NOTE: Node.js is installed for Claude Code extension which requires Node.js >=18
+# Install Node.js 22.x via NodeSource - removed nvm as it requires additional setup to be available in zsh
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
+    && apt-get install -y nodejs \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 # Switch to non-root user
 USER vscode
-
-# NOTE: Node.js is installed for Claude Code extension which requires Node.js >=18
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash \
-    && export NVM_DIR="$HOME/.nvm" \
-    && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \
-    && nvm install 22 \
-    && nvm use 22
 
 ENV POWERLEVEL9K_DISABLE_GITSTATUS=true
 
