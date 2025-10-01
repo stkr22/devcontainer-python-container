@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:2.0.3-ubuntu24.04@sha256:daa08ddb48ad4e4e7367c348e0a6f250762f1f0d8348f1f9acbef5f884ce093d
+FROM mcr.microsoft.com/devcontainers/base:2.0.4-ubuntu24.04@sha256:ad92cae7c25cafb1e7bb5aa7520b81be85fac022ea92e404b94a11127631fae3
 
 ENV TZ="Europe/Berlin"
 
