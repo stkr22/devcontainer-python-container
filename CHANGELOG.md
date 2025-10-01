@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.1.0...v1.2.0) (2025-10-01)
+
+
+### Features
+
+* adding nodejs 22 for claude code and adjusting powerline10k install ([eb95171](https://github.com/stkr22/devcontainer-python-container/commit/eb95171575fba66e597627bde28ccc8a9537b18c))
+
 ## [1.1.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.0.0...v1.1.0) (2025-10-01)
 
 
