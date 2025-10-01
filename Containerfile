@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/base:2.0.4-ubuntu24.04@sha256:ad92cae7c25cafb1e7bb5aa7520b81be85fac022ea92e404b94a11127631fae3
 
-ENV TZ="Europe/Berlin"
+ENV TZ="Europe/Berlin" 
 
 # Install UV package manager
 COPY --from=ghcr.io/astral-sh/uv:0.8.22@sha256:9874eb7afe5ca16c363fe80b294fe700e460df29a55532bbfea234a0f12eddb1 /uv /uvx /bin/
