@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.1...v1.2.2) (2025-10-01)
+
+
+### Bug Fixes
+
+* using nodesource setup instead of nvm ([37638dc](https://github.com/stkr22/devcontainer-python-container/commit/37638dca8887ec6bd278c2a78011344c082b15fe))
+
 ## [1.2.1](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.0...v1.2.1) (2025-10-01)
 
 
