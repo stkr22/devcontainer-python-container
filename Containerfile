@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/devcontainers/base:2.0.5-ubuntu24.04@sha256:d94c97dd9cacf
 ENV TZ="Europe/Berlin" 
 
 # Install UV package manager
-COPY --from=ghcr.io/astral-sh/uv:0.8.22@sha256:9874eb7afe5ca16c363fe80b294fe700e460df29a55532bbfea234a0f12eddb1 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.9.5@sha256:f459f6f73a8c4ef5d69f4e6fbbdb8af751d6fa40ec34b39a1ab469acd6e289b7 /uv /uvx /bin/
 
 # Set up Python virtual environment
 ENV VIRTUAL_ENV=/workspaces/.venv
