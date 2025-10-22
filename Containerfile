@@ -36,8 +36,6 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 # Switch to non-root user
 USER vscode
 
-ENV POWERLEVEL9K_DISABLE_GITSTATUS=true
-
 # MesloLGS
 # Create fonts directory and download font files
 # Download all 4 MesloLGS NF variants
@@ -47,8 +45,6 @@ RUN mkdir -p ~/.local/share/fonts && \
 
 # Install powerlevel10k theme
 RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-ENV POWERLEVEL9K_DISABLE_GITSTATUS=true
 
 # MesloLGS
 # Create fonts directory and download font files
@@ -75,7 +71,7 @@ ENV CLAUDE_CONFIG_DIR=/home/vscode/.claude
 
 # Install Claude Code (non-root installation for auto-updates)
 RUN export PATH="~/.local/bin:$PATH"
-RUN curl -fsSL https://claude.ai/install.sh | zsh -s latest
+RUN curl -fsSL https://claude.ai/install.sh | zsh -s 2.0.25
 
 # Set up command history persistence for Claude Code
 RUN SNIPPET="export PROMPT_COMMAND='history -a'" && \
