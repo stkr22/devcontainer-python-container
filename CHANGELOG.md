@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.3](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.2...v1.2.3) (2025-10-22)
+
+
+### Bug Fixes
+
+* setting claude code to fixed version and moving gitstatus to p10k ([67b67fc](https://github.com/stkr22/devcontainer-python-container/commit/67b67fc3603da6af2617a4e1439ceab867278a68))
+
 ## [1.2.2](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.1...v1.2.2) (2025-10-01)
 
 
