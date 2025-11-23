@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.4](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.3...v1.2.4) (2025-11-23)
+
+
+### Bug Fixes
+
+* update base image and UV package version; upgrade Claude Code to 2.0.50 ([3f687a6](https://github.com/stkr22/devcontainer-python-container/commit/3f687a6509c75896e320614e456d48132a7b4d44))
+
 ## [1.2.3](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.2...v1.2.3) (2025-10-22)
 
 
