@@ -1,9 +1,9 @@
-FROM mcr.microsoft.com/devcontainers/base:2.0.5-ubuntu24.04@sha256:d94c97dd9cacf183d0a6fd12a8e87b526e9e928307674ae9c94139139c0c6eae
+FROM mcr.microsoft.com/devcontainers/base:2.0.2-trixie@sha256:2e826a6ae92e5744cc0a471a03b4411e64f6b7cc6af3adaecddad697f0018f10
 
 ENV TZ="Europe/Berlin" 
 
 # Install UV package manager
-COPY --from=ghcr.io/astral-sh/uv:0.9.5@sha256:f459f6f73a8c4ef5d69f4e6fbbdb8af751d6fa40ec34b39a1ab469acd6e289b7 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.9.11@sha256:5aa820129de0a600924f166aec9cb51613b15b68f1dcd2a02f31a500d2ede568 /uv /uvx /bin/
 
 # Set up Python virtual environment
 ENV VIRTUAL_ENV=/workspaces/.venv
@@ -71,7 +71,7 @@ ENV CLAUDE_CONFIG_DIR=/home/vscode/.claude
 
 # Install Claude Code (non-root installation for auto-updates)
 RUN export PATH="~/.local/bin:$PATH"
-RUN curl -fsSL https://claude.ai/install.sh | zsh -s 2.0.25
+RUN curl -fsSL https://claude.ai/install.sh | zsh -s 2.0.50
 
 # Set up command history persistence for Claude Code
 RUN SNIPPET="export PROMPT_COMMAND='history -a'" && \
