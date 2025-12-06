@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/devcontainers/base:2.0.2-trixie@sha256:2e826a6ae92e5744cc
 ENV TZ="Europe/Berlin" 
 
 # Install UV package manager
-COPY --from=ghcr.io/astral-sh/uv:0.9.11@sha256:5aa820129de0a600924f166aec9cb51613b15b68f1dcd2a02f31a500d2ede568 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.9.16@sha256:ae9ff79d095a61faf534a882ad6378e8159d2ce322691153d68d2afac7422840 /uv /uvx /bin/
 
 # Set up Python virtual environment
 ENV VIRTUAL_ENV=/workspaces/.venv
