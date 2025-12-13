@@ -71,7 +71,7 @@ ENV CLAUDE_CONFIG_DIR=/home/vscode/.claude
 
 # Install Claude Code (non-root installation for auto-updates)
 RUN export PATH="~/.local/bin:$PATH"
-RUN curl -fsSL https://claude.ai/install.sh | zsh -s 2.0.50
+RUN curl -fsSL https://claude.ai/install.sh | zsh -s 2.0.69
 
 # Set up command history persistence for Claude Code
 RUN SNIPPET="export PROMPT_COMMAND='history -a'" && \
