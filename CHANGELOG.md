@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.4...v1.3.0) (2025-12-13)
+
+
+### Features
+
+* updating claude code ([b35e5cc](https://github.com/stkr22/devcontainer-python-container/commit/b35e5cc6014b47c052054a26e21116dafea7ce77))
+
 ## [1.2.4](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.3...v1.2.4) (2025-11-23)
 
 
