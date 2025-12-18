@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:2.1.2-trixie@sha256:36751f1ee2f30745a649afc2b2061f321bacdaa0617159901fe6725b34c93df4
+FROM mcr.microsoft.com/devcontainers/base:2.1.3-trixie@sha256:30b0a0c004ca94d36c323ee993361a7e0ae25ea255ea125201e8a9587501c324
 
 ENV TZ="Europe/Berlin" 
 
