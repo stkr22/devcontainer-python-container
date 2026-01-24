@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.3.0...v1.4.0) (2026-01-24)
+
+
+### Features
+
+* remove UV and Claude Code installations from Containerfile ([0dd59e2](https://github.com/stkr22/devcontainer-python-container/commit/0dd59e235dc60446f6fb836c1c53ba1dd517cb1e))
+* remove UV and Claude Code installations from Containerfile ([584d9c9](https://github.com/stkr22/devcontainer-python-container/commit/584d9c9c42e36a46a5862862404866f8c371dfe3))
+
 ## [1.3.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.2.4...v1.3.0) (2025-12-13)
 
 
