@@ -2,17 +2,6 @@ FROM mcr.microsoft.com/devcontainers/base:2.1.2-trixie@sha256:36751f1ee2f30745a6
 
 ENV TZ="Europe/Berlin" 
 
-# Install UV package manager
-COPY --from=ghcr.io/astral-sh/uv:0.9.17@sha256:5cb6b54d2bc3fe2eb9a8483db958a0b9eebf9edff68adedb369df8e7b98711a2 /uv /uvx /bin/
-
-# Set up Python virtual environment
-ENV VIRTUAL_ENV=/workspaces/.venv
-ENV UV_PROJECT_ENVIRONMENT=/workspaces/.venv
-
-# Create necessary directories and set permissions
-RUN mkdir -p /workspaces /commandhistory && \
-    chown -R vscode:vscode /workspaces /commandhistory
-
 # Set environment variable to help with container orientation
 ENV DEVCONTAINER=true
 
@@ -24,13 +13,6 @@ RUN apt-get update && apt-get install -y \
     curl \
     wget \
     fonts-powerline \
-    && rm -rf /var/lib/apt/lists/*
-
-# NOTE: Node.js is installed for Claude Code extension which requires Node.js >=18
-# Install Node.js 22.x via NodeSource - removed nvm as it requires additional setup to be available in zsh
-RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
-    && apt-get install -y nodejs \
-    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Switch to non-root user
@@ -62,22 +44,6 @@ COPY --chown=vscode:vscode .zshrc .p10k.zsh /home/vscode/
 
 # Set the default shell to zsh rather than sh
 ENV SHELL=/bin/zsh
-
-# Create Claude configuration directory
-RUN mkdir -p /home/vscode/.claude && \
-    chown -R vscode:vscode /home/vscode/.claude
-
-ENV CLAUDE_CONFIG_DIR=/home/vscode/.claude
-
-# Install Claude Code (non-root installation for auto-updates)
-RUN export PATH="~/.local/bin:$PATH"
-RUN curl -fsSL https://claude.ai/install.sh | zsh -s 2.0.69
-
-# Set up command history persistence for Claude Code
-RUN SNIPPET="export PROMPT_COMMAND='history -a'" && \
-    echo $SNIPPET >> /home/vscode/.bashrc && \
-    echo $SNIPPET >> /home/vscode/.zshrc && \
-    touch /commandhistory/.bash_history
 
 # Set working directory
 WORKDIR /workspaces
