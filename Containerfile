@@ -15,9 +15,6 @@ RUN apt-get update && apt-get install -y \
     fontconfig \
     && rm -rf /var/lib/apt/lists/*
 
-# Install starship prompt
-RUN curl -sS https://starship.rs/install.sh | sh -s -- --yes
-
 # Switch to non-root user
 USER vscode
 
