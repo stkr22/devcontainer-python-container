@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.4.0...v1.5.0) (2026-03-30)
+
+
+### Features
+
+* replace powerlevel10k with starship prompt ([4254673](https://github.com/stkr22/devcontainer-python-container/commit/425467384ebc0b0b74fd10ebd58713b92f8a4e71))
+
+
+### Bug Fixes
+
+* remove manual starship install, use devcontainer feature instead ([699d028](https://github.com/stkr22/devcontainer-python-container/commit/699d02867c56223d0b9737b452cc845c38ee2674))
+
 ## [1.4.0](https://github.com/stkr22/devcontainer-python-container/compare/v1.3.0...v1.4.0) (2026-01-24)
 
 
